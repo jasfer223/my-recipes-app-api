@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Carbon\Carbon;
 
 class RecipeFactory extends Factory
 {
@@ -19,7 +18,7 @@ class RecipeFactory extends Factory
             'description' => $this->faker->text,
             'ingredients' => $this->faker->text,
             'procedure' => $this->faker->text,
-            'time' => $this->generateRandomTimeString(),
+            'time_to_cook' => $this->generateRandomTimeString(),
         ];
     }
 

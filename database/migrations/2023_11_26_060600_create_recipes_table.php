@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('description');
             $table->string('ingredients');
             $table->string('procedure');
-            $table->string('time');
+            $table->string('time_to_cook');
             $table->timestamps();
         });
     }

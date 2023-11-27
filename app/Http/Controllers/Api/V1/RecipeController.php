@@ -42,8 +42,7 @@ class RecipeController extends Controller
     public function update(UpdateRecipeRequest $request, Recipe $recipe)
     {
         $recipe->update($request->all());
-
-        // return new RecipeResource($recipe);
+        return response()->noContent();
     }
 
     /**
@@ -51,6 +50,7 @@ class RecipeController extends Controller
      */
     public function destroy(Recipe $recipe)
     {
-        //
+        $recipe->delete();
+        return response()->noContent();
     }
 }

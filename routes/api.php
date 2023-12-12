@@ -19,7 +19,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// create a new route group for versioning with prefixes api/v1
 Route::prefix('v1')->group(function () {
     Route::apiResource('recipes', RecipeController::class);
 });
